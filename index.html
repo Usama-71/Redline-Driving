@@ -7,29 +7,45 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #111;
+            background: url('assets/images/bg.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
             color: white;
+            position: relative;
         }
         .navbar {
             background-color: #b50000;
-            padding: 10px 0;
+            padding: 40px 0;
         }
         .navbar-brand {
             display: flex;
             align-items: center;
         }
         .navbar-brand img {
-            max-height: 50px;
+            max-height: 80px;
             width: auto;
             object-fit: contain;
             border-radius: 50%;
             margin-right: 10px;
         }
-        @media (max-width: 768px) {
-            .navbar-brand img {
-                max-height: 40px;
-            }
+        
+        .mobile-contact {
+            display: none;
+            text-align: center;
+            background-color: #b50000;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
         }
+
+        @media (max-width: 768px) {
+            .mobile-contact {
+            display: block;
+        }
+    .desktop-contact {
+        display: none;
+    }
+}
         .hero {
             background: url('https://source.unsplash.com/1600x900/?car,driving') no-repeat center center/cover;
             height: 80vh;
@@ -48,27 +64,38 @@
     </style>
 </head>
 <body>
-
+    <div class="mobile-contact">
+        📞 <a href="tel:07367464065" class="text-white text-decoration-none">07367464065</a>
+    </div>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="assets/logo/ST.png" alt="REDLINE Logo">
-                <span>REDLINE Driving School</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center">
+            <img src="assets/logo/ST.png" alt="REDLINE Logo">
+            <span>REDLINE Driving School</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto d-flex align-items-center">
+                <!-- Desktop Contact (Hidden on Mobile) -->
+                <li class="nav-item me-3 desktop-contact">
+                    <a href="tel:07367464065" class="nav-link fw-bold text-white">
+                        📞 07367464065
+                    </a>
+                </li>
+                <!-- Navigation Links -->
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
+    <br>
     <!-- Hero Section -->
     <header class="hero d-flex justify-content-center align-items-center text-center py-5">
         <div class="container">
@@ -77,17 +104,15 @@
             </h1>
     
             <p class="lead mt-4 px-lg-5" style="font-size: 1.3rem; max-width: 800px; margin: auto; line-height: 1.8; text-align: justify;">
-                <strong>Welcome to <span style="color: #b50000;">REDLINE</span> Driving School!</strong>  
+                <strong>Welcome to REDLINE Driving School!</strong>  
                 Whether you're a <strong>beginner</strong> or an <strong>experienced driver</strong>, we provide expert lessons to suit all skill levels.
             </p>
     
             <p class="lead px-lg-5" style="font-size: 1.3rem; max-width: 800px; margin: auto; line-height: 1.8; text-align: justify;">
-                Our courses include <strong>beginner lessons, advanced training, defensive driving, test preparation, refresher courses,</strong> and the <strong>Pass Plus Scheme</strong>—helping you drive with <strong>confidence and skill</strong>. 🚗💨  
+                Our courses include <strong>beginner lessons, advanced training, defensive driving, test preparation, refresher courses,</strong> and the <strong>Pass Plus Scheme</strong>—helping you drive with <strong>confidence and skill</strong>. 🚗  
             </p>
     
-            <p class="lead px-lg-5" style="font-size: 1.3rem; max-width: 800px; margin: auto; line-height: 1.8; text-align: justify;">
-                Just like Luton’s <strong>durable roads</strong>, we build a <strong>strong yet flexible foundation</strong> for every learner, tailored to your needs.  
-            </p>
+           
     
             <a href="#contact" class="btn btn-REDLINE btn-lg mt-4 px-4 py-2" style="font-size: 1.2rem;">
                 Enroll Now

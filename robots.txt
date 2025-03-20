@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://redlinedrivingschool.com/sitemap.xml
